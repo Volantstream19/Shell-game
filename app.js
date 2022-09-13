@@ -2,42 +2,41 @@
     import { getRandomItem }'./utils.js';
 
 /* State */
-const shellsTriplet = ['guessShell1', 'guessShell2', 'guessShell3']
+let gameState = 'guess';
+let guess = '';
+let result = '';
+let reveal = '';
 
-let total = 0
-let losses = 0
-let wins = 0
-
+let total = 0;
+let wins = 0;
 
 /* Actions */
 function loadPage() {
     displayShells();
+    displayScoreboard();
 }
 
+
 /* Components */
-/* scoreboard */
 
-/* guess */
+const totalDisplay = document.getElementById('total-Display');
+const winsDisplay = document.getElementById('wins-Display');
+const lossesDisplay = document.getElementById('losses-Display');
 
-/* Component */
+function displayScoreboard() {
+    totalDisplay.textContent = total;
+    winsDisplay.textContent = wins;
+    lossesDisplay.textContent = losses;
+
+
+
+
+
 // get DOM
-const guessShell1 = document.getElementById('guess-guessShell1');
-const guessShell2 = document.getElementById('guess-guessShell2');
-const guessShell3 = document.getElementById('guess-guessShell3');
-// display
-// function displayGuess() {
-//     guessShell1.classList.remove('Found It!', 'Not Here!');
-//     guessShell2.classList.remove('Found It!', 'Not Here!');
-//     guessShell3.classList.remove('Found It!', 'Not Here!');
-// }
- 
-// DOM
-const results = document.getElementById('')
 
+}
 // display
-function displayShells () {
-    if(gameState === 'guess')
-        results.classList.add('hidden');
+
 }
 // event listeners
 
